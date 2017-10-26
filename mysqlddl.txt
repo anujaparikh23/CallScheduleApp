@@ -1,0 +1,603 @@
+CREATE DATABASE LS_Call_Plan_BOT;
+
+use LS_Call_Plan_BOT;
+
+CREATE TABLE `ChatBot_Call_Activity` (
+  `Customer_ID` NVARCHAR(255) NOT NULL,
+  `First_Name` NVARCHAR(255) NULL,
+  `Last_Name` NVARCHAR(255) NULL,
+  `Specialty` NVARCHAR(255) NULL,
+  `Address` NVARCHAR(255) NULL,
+  `City` NVARCHAR(255) NULL,
+  `State` NVARCHAR(255) NULL,
+  `Zip` NVARCHAR(255) NULL,
+  `Territory_Code` NVARCHAR(255) NULL,
+  `Region_Code` NVARCHAR(255) NULL,
+  `Territory_Name` NVARCHAR(255) NULL,
+  `Region_Name` NVARCHAR(255) NULL,
+  `Target_Level` NVARCHAR(255) NULL,
+  `Call_ID` NVARCHAR(255) NULL,
+  `Call_Type` NVARCHAR(255) NULL,
+  `Sales_Direction_1` NVARCHAR(255) NULL,
+  `Sales_Direction_2` NVARCHAR(255) NULL,
+  `Sales_Direction_3` NVARCHAR(255) NULL,
+  `Sample_Quantity` NVARCHAR(255) NULL,
+  `Sampled_Product` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0001', 'Sample Only', NULL, NULL, NULL, 3, 'Brand_Z');
+
+INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0001', 'Sample Only', NULL, NULL, NULL, 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0001', 'Sample Only', NULL, NULL, NULL, 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0002', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0002', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0003', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0003', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0003', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0004', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0004', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0005', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0005', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+
+
+
+
+
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0006', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0007', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0007', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0007', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0008', 'Sample Only', NULL, NULL, NULL, 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0009', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0009', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0009', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0010', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 3, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0011', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 3, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0011', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 2, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0011', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0012', 'Sample Only', NULL, NULL, NULL, 2, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0012', 'Sample Only', NULL, NULL, NULL, 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0013', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 3, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0013', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 2, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0013', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0014', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 3, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0014', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 2, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('004', 'Paul', 'Wilson', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 'C0014', 'Detail and Sample', 'Brand_X', 'Brand_Y', 'Brand_Z', 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('006', 'Leo', 'Brown', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 'C0015', 'Detail and Sample', 'Brand_Y', 'Brand_Z', NULL, 3, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('006', 'Leo', 'Brown', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 'C0015', 'Detail and Sample', 'Brand_Y', 'Brand_Z', NULL, 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('006', 'Leo', 'Brown', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 'C0016', 'Sample Only', NULL, NULL, NULL, 3, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('006', 'Leo', 'Brown', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 'C0017', 'Detail and Sample', 'Brand_Y', 'Brand_Z', NULL, 3, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('006', 'Leo', 'Brown', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 'C0017', 'Detail and Sample', 'Brand_Y', 'Brand_Z', NULL, 1, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0018', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0018', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0018', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0019', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0019', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0020', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 3, 'Brand_Z');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0020', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 2, 'Brand_X');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 'C0020', 'Detail and Sample', 'Brand_Z', 'Brand_X', 'Brand_Y', 1, 'Brand_Y');
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('011', 'Jen', 'Mendez', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'Non-Target', 'C0021', 'Detail Only', 'Brand_Y', 'Brand_Z', NULL, NULL, NULL);
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('013', 'Jack', 'Snyder', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'Non-Target', 'C0022', 'Detail Only', 'Brand_Y', 'Brand_X', NULL, NULL, NULL);
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('015', 'Serena', 'Smith', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'Non-Target', 'C0023', 'Detail Only', 'Brand_X', 'Brand_Y', NULL, NULL, NULL);
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('015', 'Serena', 'Smith', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'Non-Target', 'C0024', 'Detail Only', 'Brand_X', 'Brand_Y', NULL, NULL, NULL);
+  INSERT INTO `ChatBot_Call_Activity` VALUES ('014', 'Rob', 'Owen', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'Non-Target', 'C0025', 'Detail and Sample', 'Brand_Z', NULL, NULL, 1, 'Brand_Z');
+
+
+
+
+
+
+
+
+
+CREATE TABLE `ChatBot_Employee_Roster` (
+  `Rep_ID` NVARCHAR(255) NULL,
+  `First_Name` NVARCHAR(255) NULL,
+  `Last_Name` NVARCHAR(255) NULL,
+  `Territory_Code` NVARCHAR(255) NULL,
+  `Region_Code` NVARCHAR(255) NULL,
+  `Territory_Name` NVARCHAR(255) NULL,
+  `Region_Name` NVARCHAR(255) NULL,
+  `Start_Date` DATETIME NULL
+  );
+  
+  
+  
+  
+INSERT INTO `ChatBot_Employee_Roster` VALUES ('R001', 'Adam', 'Hixon', '10101', '10100','Birmingham', 'NorthEast','2017-01-01 00:00:00.000');
+
+
+
+
+
+
+
+
+
+CREATE TABLE `ChatBot_Facebook_Connections` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Common_Connections` NVARCHAR(255) NULL,
+  `Connection_HCP_Flag` NVARCHAR(255) NULL
+  );
+  
+
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('001', 'Dr. Sam Fury', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('001', 'Adam Sandler', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('001', 'Dev Patel', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('001', 'Dr. Nikita Romanov', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('002', 'Dr. Chris Ambrose', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('002', 'Dr. Charles Xavier', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('003', 'Christina Adams', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('003', 'Wade Wilso', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('003', 'Dr. Jade Knight', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('004', 'Kim Williams', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('004', 'Peter Dinklage', 'N');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('005', 'Dr. Amulya Singh', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('005', 'Dr. Debbie Watso', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('005', 'Dr. Stacy Kudrow', 'Y');
+INSERT INTO `ChatBot_Facebook_Connections` VALUES ('005', 'Alex Jones', 'N');
+
+
+
+
+CREATE TABLE `ChatBot_Facebook_Events_Attended` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Events_Attended` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Facebook_Events_Attended` VALUES ('001', 'NorthEast Summit of Neurologists');
+INSERT INTO `ChatBot_Facebook_Events_Attended` VALUES ('001', 'World Congress on Innovative Research in Neurology');
+INSERT INTO `ChatBot_Facebook_Events_Attended` VALUES ('002', '2nd International Conference and Expo on Holistic Medicine and Nursing');
+INSERT INTO `ChatBot_Facebook_Events_Attended` VALUES ('004', '3rd Global Summit on Laser Treatment');
+INSERT INTO `ChatBot_Facebook_Events_Attended` VALUES ('007', 'Glycobiology World Congress');
+
+
+
+
+
+
+CREATE TABLE `ChatBot_Facebook_Groups` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Facebook_Groups` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('004', 'Harward Medical School 1997 Batch');
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('004', 'Abdominal Surgeons Group, GA');
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('004', 'Analytics for Clinical Trials');
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('001', 'Glaims Institute of Medical Acience, 2001 Batch');
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('001', 'Adventure on Wheels');
+INSERT INTO `ChatBot_Facebook_Groups` VALUES ('001', 'Pfizer Speaker Group');
+
+
+
+
+
+CREATE TABLE `ChatBot_Facebook_Interest_Areas` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Interests` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('001', 'Deakin University');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('001', 'Doctors Jobs in US');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('001', 'Pfizer');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('001', 'AstraZeneca');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('002', 'Boehringer Ingelheim');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('002', 'Abbott');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('002', 'DIA');
+INSERT INTO `ChatBot_Facebook_Interest_Areas` VALUES ('002', 'Clinical Research and Clinical Drug Development');
+
+
+
+
+
+CREATE TABLE `ChatBot_Facebook_Planned_Events` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Planned_Events` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Facebook_Planned_Events` VALUES ('004', 'Private Equity Forum Chicago 2017');
+INSERT INTO `ChatBot_Facebook_Planned_Events` VALUES ('005', '19th Annual Cardiology Conference');
+INSERT INTO `ChatBot_Facebook_Planned_Events` VALUES ('009', '23rd International Workshop Conference on Angiology');
+
+
+
+CREATE TABLE `ChatBot_Individual_Publications` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Individual_Publications` NVARCHAR(255) NULL
+  );
+  
+
+
+INSERT INTO `ChatBot_Individual_Publications` VALUES ('001', 'Pharmacological basics of therapeutics');
+INSERT INTO `ChatBot_Individual_Publications` VALUES ('001', 'Improving Bioscience research reporting');
+INSERT INTO `ChatBot_Individual_Publications` VALUES ('001', 'Lasor beam propagation through skin tissues');
+INSERT INTO `ChatBot_Individual_Publications` VALUES ('004', 'Immunochemistry in practice');
+INSERT INTO `ChatBot_Individual_Publications` VALUES ('004', 'Study on fibrinogen and white cell count');
+
+
+
+
+CREATE TABLE `ChatBot_Internal_Sponsored_Trials` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Internal_Sponsored_Trials` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_Internal_Sponsored_Trials` VALUES ('004', 'A clinical trial of the effects of dietary patterns on blood pressure');
+
+
+
+
+
+CREATE TABLE `ChatBot_Joint_Publications` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Joint_Publications` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_Joint_Publications` VALUES ('005', 'Mutation in familial motor neuron disease');
+INSERT INTO `ChatBot_Joint_Publications` VALUES ('004', 'Aromatase activity in primary and metastatic human breast cancer');
+
+
+
+
+CREATE TABLE `ChatBot_LinkedIn_Connections` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Common_Connections` NVARCHAR(255) NULL,
+  `Connection_HCP_Flag` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('004', 'Dr. Matt Thomas', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('004', 'Dr. John Yan', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('004', 'Dr. Stuart Cain', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('004', 'Dr. William Robbs', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('001', 'Allen Toffel', 'N');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('001', 'Dr. Matt Thomas', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('001', 'Dr. Brendan Faser', 'Y');
+INSERT INTO `ChatBot_LinkedIn_Connections` VALUES ('001', 'Dr. Frank Miller', 'Y');
+
+
+
+CREATE TABLE `ChatBot_LinkedIn_Education` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Education_Institute` NVARCHAR(255) NULL,
+  `Connection_HCP_Flag` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_LinkedIn_Education` VALUES ('001', 'Harward Medical School', 'MD');
+INSERT INTO `ChatBot_LinkedIn_Education` VALUES ('002', 'Stanford Medical School', 'DO');
+INSERT INTO `ChatBot_LinkedIn_Education` VALUES ('003', 'Community Medical College, NV', 'MD');
+INSERT INTO `ChatBot_LinkedIn_Education` VALUES (NULL, NULL, NULL);
+
+
+
+
+CREATE TABLE `ChatBot_LinkedIn_Experience` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Experience (months)` NVARCHAR(255) NULL,
+  `Start_Date` DATETIME NULL,
+  `End_Date` DATETIME NULL,
+  `Office_Type` NVARCHAR(255) NULL,
+  `Office_Name` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('001',60, '2000-01-01 00:00:00.000','2004-12-31 00:00:00.000', 'Clinic', 'Allergy Specialist Clinic');
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('001', 60,'2005-01-01 00:00:00.000','2015-12-31 00:00:00.000', 'Account', N'Fortis Hospital');
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('001', 18, '2016-01-01 00:00:00.000',NULL, 'Account', 'Max Hospital');
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('003',  36,'2005-01-01 00:00:00.000','2007-12-31 00:00:00.000','Clinic', 'Specialist Treatment Centre');
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('003', 48, '2008-01-01 00:00:00.000','2011-12-31 00:00:00.000', 'Account', 'Apollo Hospital');
+INSERT INTO `ChatBot_LinkedIn_Experience` VALUES ('003', 66, '2012-01-01 00:00:00.000', NULL,'Account', 'Ryan Medical Centre');
+
+
+
+
+CREATE TABLE `ChatBot_LinkedIn_Interest_Areas` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Interests` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('011','Advance Research in Abdominal Surgery');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('011', 'Cummins Medical Devices');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('011', 'Abbott');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('007',  'Generic Drugs');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('007', 'Development in Managed Markets');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('012', 'Disease Discovery in Dermatology');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('012', 'Pfizer');
+INSERT INTO `ChatBot_LinkedIn_Interest_Areas` VALUES ('012', 'Clinical Research and Clinical Drug Development');
+
+
+
+
+
+
+
+
+
+ CREATE TABLE `ChatBot_Physician_Calender` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Start_Time` DOUBLE NULL,
+  `End_Time` DOUBLE NULL,
+  `Status` NVARCHAR(255) NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 11, 12, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 12, 13, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('001', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 12, 13, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('002', 17, 18, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 15, 16, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 17, 18, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('004', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 13, 14, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 14, 15, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('003', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('005', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 9, 10, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('006', 17, 18, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 9, 10, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 10, 11, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 11, 12, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('007', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 11, 12, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 12, 13, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('008', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 9, 10, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('009', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 15, 16, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('010', 17, 18, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 9, 10, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('011', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 15, 16, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 16, 17, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('012', 17, 18, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('013', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 8, 9, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 9, 10, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 10, 11, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 11, 12, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 13, 14, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 14, 15, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 15, 16, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('014', 17, 18, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 8, 9, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 9, 10, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 10, 11, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 11, 12, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 12, 13, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 13, 14, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 14, 15, 'Available');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 15, 16, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 16, 17, 'Occupied');
+INSERT INTO `ChatBot_Physician_Calender` VALUES ('015', 17, 18, 'Occupied');
+
+
+
+
+
+
+
+CREATE TABLE `ChatBot_Physician_Universe` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `First_Name` NVARCHAR(255) NULL,
+  `Last_Name` NVARCHAR(255) NULL,
+  `Specialty` NVARCHAR(255) NULL,
+  `Address` NVARCHAR(255) NULL,
+  `City` NVARCHAR(255) NULL,
+  `State` NVARCHAR(255) NULL,
+  `Zip` NVARCHAR(255) NULL,
+  `Territory_Code` NVARCHAR(255) NULL,
+  `Region_Code` NVARCHAR(255) NULL,
+  `Territory_Name` NVARCHAR(255) NULL,
+  `Region_Name` NVARCHAR(255) NULL,
+  `Target_Flag` NVARCHAR(255) NULL,
+  `Target_Level` NVARCHAR(255) NULL,
+  `Brand_X_TRx` DOUBLE NULL,
+  `Brand_Y_TRx` DOUBLE NULL,
+  `Brand_Z_TRx` DOUBLE NULL,
+  `Customer_Valuation_Index` DOUBLE NULL,
+  `Customer_Rank` DOUBLE NULL
+  );
+  
+
+
+
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'A', 74, 60, 50, 0.94, 2);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'A', 77, 59, 95, 0.92, 3);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('004', 'Paul', 'Wilso', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'B', 71, 83, 67, 0.9, 4);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('005', 'Ned', 'Stark', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '100 GENEVIEVE CT', 'PEACHTREE CITY', 'GA', '30269', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'B', 75, 59, 85, 0.83, 5);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('006', 'Leo', 'Brow', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'C', 95, 75, 82, 0.8, 6);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM);', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'A', 100, 94, 66, 0.8, 7);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('008', 'Gal', 'Lee', 'ANESTHESIOLOGY CRITICAL CARE MED (EM);', '231 GRAEFE ST', 'GRIFFI', 'GA', '30224', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'C', 66, 83, 95, 0.76, 8);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('009', 'Amy', 'Adams', 'ADOLESCENT MEDICINE (PEDIATRICS);', '755 MOUNT VERNON HWY NE', 'ATLANTA', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'C', 64, 79, 73, 0.73, 9);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('010', 'Sophia', 'Myles', 'ADOLESCENT MEDICINE (PEDIATRICS);', '744 NOAH DR', 'JASPER', 'GA', '30143', '10101', '10100', 'Birmingham', 'NorthEast', 'Y', 'C', 62, 52, 65, 0.71, 10);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('011', 'Je', 'Mendez', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'N', 'Non-Target', 16, 29, 28, 0.4, 11);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('012', 'Will', 'Turner', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'N', 'Non-Target', 26, 18, 21, 0.37, 12);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('013', 'Jack', 'Snyder', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'N', 'Non-Target', 21, 28, 24, 0.34, 13);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('014', 'Rob', 'Owe', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'N', 'Non-Target', 16, 12, 20, 0.28, 14);
+INSERT INTO `ChatBot_Physician_Universe` VALUES ('015', 'Serena', 'Smith', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'N', 'Non-Target', 30, 30, 17, 0.23, 15);
+
+
+
+
+
+
+CREATE TABLE `ChatBot_PTT_File` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `First_Name` NVARCHAR(255) NULL,
+  `Last_Name` NVARCHAR(255) NULL,
+  `Specialty` NVARCHAR(255) NULL,
+  `Address` NVARCHAR(255) NULL,
+  `City` NVARCHAR(255) NULL,
+  `State` NVARCHAR(255) NULL,
+  `Zip` NVARCHAR(255) NULL,
+  `Territory_Code` NVARCHAR(255) NULL,
+  `Region_Code` NVARCHAR(255) NULL,
+  `Territory_Name` NVARCHAR(255) NULL,
+  `Region_Name` NVARCHAR(255) NULL,
+  `Target_Level` NVARCHAR(255) NULL,
+  `CallFrequency` DOUBLE NULL,
+  `Sample_per_Call_P1` DOUBLE NULL,
+  `Sample_per_Call_P2` DOUBLE NULL,
+  `Sample_per_Call_P3` DOUBLE NULL,
+  `Sales_Direction_1` NVARCHAR(255) NULL,
+  `Sales_Direction_2` NVARCHAR(255) NULL,
+  `Sales_Direction_3` NVARCHAR(255) NULL
+  );
+  
+  
+  
+
+INSERT INTO `ChatBot_PTT_File` VALUES ('001', 'John', 'Players', 'ALLERGY', '4895 WINDWARD PKWY', 'ALPHARETTA', 'GA', '30004', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 8, 2, 1, 3, 'Brand_Z', 'Brand_X', 'Brand_Y');
+INSERT INTO `ChatBot_PTT_File` VALUES ('002', 'Chris', 'Evans', 'ALLERGY', '3020 SCENIC HWY S', 'SNELLVILLE', 'GA', '30039', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 8, 2, 1, 3, 'Brand_Z', 'Brand_X', 'Brand_Y');
+INSERT INTO `ChatBot_PTT_File` VALUES ('003', 'Robert', 'Buttler', 'ABDOMINAL SURGERY', '800 MOUNT VERNON HWY NE', 'SANDY SPRINGS', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 8, 2, 1, 3, 'Brand_Z', 'Brand_X', 'Brand_Y');
+INSERT INTO `ChatBot_PTT_File` VALUES ('004', 'Paul', 'Wilso', 'ABDOMINAL SURGERY', '5670 PEACHTREE DUNWOODY RD', 'ATLANTA', 'GA', '30342', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 6, 3, 2, 1, 'Brand_X', 'Brand_Y', 'Brand_Z');
+INSERT INTO `ChatBot_PTT_File` VALUES ('005', 'Ned', 'Stark', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '100 GENEVIEVE CT', 'PEACHTREE CITY', 'GA', '30269', '10101', '10100', 'Birmingham', 'NorthEast', 'B', 6, 3, 2, 1, 'Brand_X', 'Brand_Y', 'Brand_Z');
+INSERT INTO `ChatBot_PTT_File` VALUES ('006', 'Leo', 'Brow', 'ADULT CARDIOTHORACIC ANESTHESIOLOGY', '12 MEDICAL DR NE', 'CARTERSVILLE', 'GA', '30121', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 4, 0, 3, 1, 'Brand_Y', 'Brand_Z', NULL);
+INSERT INTO `ChatBot_PTT_File` VALUES ('007', 'Jack', 'Warne', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '1525 CLIFTON RD NE', 'ATLANTA', 'GA', '30322', '10101', '10100', 'Birmingham', 'NorthEast', 'A', 8, 2, 1, 3, 'Brand_Z', 'Brand_X', 'Brand_Y');
+INSERT INTO `ChatBot_PTT_File` VALUES ('008', 'Gal', 'Lee', 'ANESTHESIOLOGY CRITICAL CARE MED (EM)', '231 GRAEFE ST', 'GRIFFI', 'GA', '30224', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 4, 0, 3, 1, 'Brand_Y', 'Brand_Z', NULL);
+INSERT INTO `ChatBot_PTT_File` VALUES ('009', 'Amy', 'Adams', 'ADOLESCENT MEDICINE (PEDIATRICS)', '755 MOUNT VERNON HWY NE', 'ATLANTA', 'GA', '30328', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 4, 0, 3, 1, 'Brand_Y', 'Brand_Z', NULL);
+INSERT INTO `ChatBot_PTT_File` VALUES ('010', 'Sophia', 'Myles', 'ADOLESCENT MEDICINE (PEDIATRICS)', '744 NOAH DR', 'JASPER', 'GA', '30143', '10101', '10100', 'Birmingham', 'NorthEast', 'C', 4, 0, 3, 1, 'Brand_Y', 'Brand_Z', NULL);
+
+
+
+
+
+CREATE TABLE `ChatBot_Third_Party_Trials` (
+  `Customer_ID` NVARCHAR(255) NULL,
+  `Third_Party_Trials` NVARCHAR(255) NULL
+  );
+  
+  
+
+INSERT INTO `ChatBot_Third_Party_Trials` VALUES ('004', 'A clinical trial of vena caval filters');
+INSERT INTO `ChatBot_Third_Party_Trials` VALUES ('008', 'Mineral density and bone turnover in rheumatoid arthritis');

@@ -1,0 +1,7 @@
+Customer_ID,Experience (months),Start_Date,End_Date,Office_Type,Office_Name
+001,60,2000-01-01 00:00:00,2004-12-31 00:00:00,Clinic,Allergy Specialist Clinic
+001,60,2005-01-01 00:00:00,2015-12-31 00:00:00,Account,Fortis Hospital
+001,18,2016-01-01 00:00:00,NULL,Account,Max Hospital
+003,36,2005-01-01 00:00:00,2007-12-31 00:00:00,Clinic,Specialist Treatment Centre
+003,48,2008-01-01 00:00:00,2011-12-31 00:00:00,Account,Apollo Hospital
+003,66,2012-01-01 00:00:00,NULL,Account,Ryan Medical Centre

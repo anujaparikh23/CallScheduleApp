@@ -1,0 +1,23 @@
+{
+  "name": "novbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "NovBotV1.js",
+  "scripts": {
+    "start": "node AnujaBotCardSFB.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "botbuilder": "^3.10.2",
+    "chai": "^4.1.2",
+    "cli-table": "^0.3.1",
+    "data-forge": "^0.5.5",
+    "ejs": "^2.5.7",
+    "group-array": "^0.3.3",
+    "node-json2html": "^1.1.1",
+    "node-mysql-importer": "0.0.10",
+    "restify": "^5.2.0",
+    "tableify": "^1.1.0"
+  }
+}

@@ -1,0 +1,5 @@
+Customer_ID,Education_Institute,Connection_HCP_Flag
+001,Harward Medical School,MD
+002,Stanford Medical School,DO
+003,Community Medical College, NV,MD
+NULL,NULL,NULL
