@@ -37,9 +37,9 @@ var connector = new builder.ChatConnector({
 //Bot Endpoint
 
 var bot = new builder.UniversalBot(connector);
-//server.post('/api/messages', connector.listen());
+server.post('/api/messages', connector.listen());
 
-server.post('CallScheduleBot/api/messages', connector.listen());
+//server.post('CallScheduleBot/api/messages', connector.listen());
 
 //server.post('https://callscheduleapp.azurewebsites.net/api/messages', connector.listen());
 
