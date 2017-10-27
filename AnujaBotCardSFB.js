@@ -19,7 +19,7 @@ var ToTime;
 // Setup Restify Server
 
 var server = restify.createServer();
-server.listen(process.env.port || process.env.PORT || 5602, function() {
+server.listen(process.env.port || process.env.PORT || 1337, function() {
     console.log('%s listening to %s', server.name, server.url);
 });
 
@@ -38,7 +38,15 @@ var connector = new builder.ChatConnector({
 
 var bot = new builder.UniversalBot(connector);
 //server.post('/api/messages', connector.listen());
-server.post('/api/messages', connector.listen());
+
+server.post('CallScheduleBot/api/messages', connector.listen());
+
+//server.post('https://callscheduleapp.azurewebsites.net/api/messages', connector.listen());
+
+
+server.get(/\/public\/?.*/, restify.plugins.serveStatic({
+    directory: __dirname
+}));
 
 //LUIS Details
 
