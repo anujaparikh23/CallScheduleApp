@@ -4,7 +4,7 @@ var builder = require('botbuilder');
 
 //Setup for mysql connection
 
-var mysql = require('mysql');
+//var mysql = require('mysql');
 
 //For data forge
  
@@ -62,17 +62,17 @@ bot.recognizer(recognizer);
 
 
 
-var con = mysql.createConnection({
+//var con = mysql.createConnection({
  //host     : '35.154.235.29',
- host     : 'ip-172-31-11-123.ap-south-1.compute.internal',
- user     : 'cts461006',
- password : 'password-user',
- port : 3306,
- database : 'LS_Call_Plan_BOT'
-});
-con.connect(function(err) {
-     if (err) throw err;
-});
+// host     : 'ip-172-31-11-123.ap-south-1.compute.internal',
+// user     : 'cts461006',
+// password : 'password-user',
+// port : 3306,
+// database : 'LS_Call_Plan_BOT'
+//});
+//con.connect(function(err) {
+//     if (err) throw err;
+//});
 
 // Fix for Skype issue
   bot.use(builder.Middleware.dialogVersion({
