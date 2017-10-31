@@ -8,6 +8,9 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node":">=8.4.0"
+  },
   "dependencies": {
     "botbuilder": "^3.10.2",
     "chai": "^4.1.2",
