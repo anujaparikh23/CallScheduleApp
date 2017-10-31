@@ -2,7 +2,7 @@
   "name": "novbot",
   "version": "1.0.0",
   "description": "",
-  "main": "NovBotV1.js",
+  "main": "AnujaBotCardSFB.js",
   "scripts": {
     "start": "node AnujaBotCardSFB.js"
   },
